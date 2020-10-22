@@ -8,7 +8,7 @@ function upd(v) {
 	const xhr = new XMLHttpRequest();
 	xhr.onreadystatechange = function() {
 		if (this.readyState == 4)
-			katex.render(this.responseText, document.getElementById('hw'));
+			katex.render(this.responseText, document.getElementById('hw'), {displayMode:true});
 	}
 	xhr.open('GET', 'tex/'+v+'.tex');
 	xhr.send()
@@ -18,7 +18,7 @@ function upd(v) {
 </head>
 <body>
 <select id="sel" onChange="upd(this.value)">
-	<option value="1">1</option>
+	<option value="1">188-215,1004,1031-1042,1046-1051</option>
 </select>
 <div id="hw"></div>
 <script>
