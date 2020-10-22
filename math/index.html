@@ -17,9 +17,16 @@ function upd(v) {
 </script>
 </head>
 <body>
-<select onChange="upd(this.value)">
+<select id="sel" onChange="upd(this.value)">
 	<option value="1">1</option>
 </select>
 <div id="hw"></div>
+<script>
+	var dflt = document.createElement("option");
+	dflt.text = "∅";
+	dflt.hidden = true;
+	dflt.selected = true;
+	document.getElementById('sel').add(dflt);
+</script>
 </body>
 </html>
