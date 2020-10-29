@@ -1,32 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
-<script>
-function upd(v) {
-	const xhr = new XMLHttpRequest();
-	xhr.onreadystatechange = function() {
-		if (this.readyState == 4)
-			katex.render(this.responseText, document.getElementById('hw'), {displayMode:true});
-	}
-	xhr.open('GET', 'tex/'+v+'.tex');
-	xhr.send()
-	return;
-}
-</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>hw</title>
 </head>
 <body>
-<select id="sel" onChange="upd(this.value)">
-	<option value="1">188-215,1004,1031-1042,1046-1051</option>
-</select>
-<div id="hw"></div>
-<script>
-	var dflt = document.createElement("option");
-	dflt.text = "∅";
-	dflt.hidden = true;
-	dflt.selected = true;
-	document.getElementById('sel').add(dflt);
-</script>
+  <a href="1.html">188-215,1004,1031-1042,1046-1051</a><br>
+  <a href="2.html">1075-1083,1089-1098,1107-1113,1119,1124,1132,1134,1137,1143,1147,1150,1155,1160,1165,1170</a>
 </body>
 </html>
